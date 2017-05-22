@@ -14,5 +14,8 @@
     "express": "^4.15.3",
     "mongojs": "^2.4.0",
     "mongoose": "^4.10.0"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.0.4"
   }
 }

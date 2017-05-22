@@ -47,4 +47,10 @@ create document
 ```
 mongod --dbpath d:\codes\node\project365\001\data
 ```
-
+.angular-cli.json
+```
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "../client",
+```
