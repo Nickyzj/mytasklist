@@ -55,7 +55,7 @@ router.put('/task/:id', function(req, res, next) {
         res.status(400);
         res.json({"error": "Bad Data"});
     } else {
-        db.tasks.update({_id: mongojs.ObjectId(req.params.id)}, updTask, {}, function(err, result) {
+        db.tasks.update({_id: mongojs.ObjectId(req.params.id)}, updTask, {}, function(err, task) {
             if (err) {
                 res.json(err);
             }
@@ -65,11 +65,12 @@ router.put('/task/:id', function(req, res, next) {
 });
 
 router.delete('/task/:id', (req, res, next) => {
-    db.tasks.remove({_id: mongojs.ObjectId(req.params.id)}, function(err, result) {
+    db.tasks.remove({_id: mongojs.ObjectId(req.params.id)}, function(err, task) {
         if (err) {
             res.json(err);
+        } else {
+            res.json(task);
         }
-        res.json({"msg": "Delete success!"});
     });
 });
 

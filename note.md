@@ -54,3 +54,8 @@ mongod --dbpath d:\codes\node\project365\001\data
       "root": "src",
       "outDir": "../client",
 ```
+
+```
+ng build --watch
+```
+
