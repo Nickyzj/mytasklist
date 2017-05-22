@@ -1,14 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var mongojs = require('mongojs');
-// var mongoose = require('mongoose');
 
 // var db = mongojs('mongodb://nicky:nicky@ds123370.mlab.com:23370/mytasklist_nicky', ['tasks']);
 var databaseUrl = 'mongodb://localhost:27017/mytasklist';
 var collections = ['tasks'];
 var db = mongojs(databaseUrl, collections);
-
-// const TaskList = require('../models/tasklist');
 
 router.get('/tasks', function(req, res, next) {
     db.tasks.find(function(err, tasks) {

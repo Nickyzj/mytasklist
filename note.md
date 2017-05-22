@@ -43,3 +43,8 @@ create document
     "isDone": false
 }
 ```
+
+```
+mongod --dbpath d:\codes\node\project365\001\data
+```
+
